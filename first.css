@@ -1,0 +1,188 @@
+.slideImg{
+    height:600px;
+    width:100%
+}
+
+.slideImgContent{
+    height:100% !important;
+    width:100% !important
+}
+
+.ii {
+    width: 25%;
+    box-sizing: border-box;
+    border: 2px solid black;
+    border-radius: 4px;
+    font-size:14px;
+    background-color: white;
+    background-image: url('images/314807_search_icon.png');
+    background-position: 1px 1px; 
+    background-repeat: no-repeat;
+    padding: 10px 20px 12px 50px;
+  }
+  input[type=submit] {
+    width: 10%;
+    background-color: #af4c96;
+    color: white;
+    padding: 10px 15px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+  /* dic */
+  #quickSearch{
+    width:100%;
+    margin-left:2%;
+    margin-top: 2%;
+}
+
+#quickHeading{
+     font-size:30px;
+     color:#0e0b0d;
+     display:block;
+     font-weight:bold;
+     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+     margin-left: 2%;
+}
+#quickHeading:hover{
+    font-size:40px;
+    color:#f14bf7;
+}
+
+#quickSubHeading{
+    font-size:20px;
+    color:rgb(3, 3, 3);
+    display:block;
+    line-height: 3;
+    margin-left: 2%;
+}
+
+.tileContainer{
+    width:20%;
+    box-shadow: 5px 10px 20px gray;
+    display: inline-block;
+    margin-left: 1%;
+    margin-top: 1%;
+    animation: dance 10s infinite; 
+}
+
+
+
+.tileContainer:hover{
+    /* 
+    transform:scale(1.1)
+    transform:skewX(-20deg)
+    transform:rotate(0deg)
+     transform:translate(100px,100px)*/
+    transform:scale(1.1)
+}
+
+.tileComponent1{
+  width:70%;
+  height:80px;
+}
+
+.tileComponent1 > img{
+    width:143%;
+    height:80px;
+}
+.tileComponent2{
+    width:25%;
+    margin-left: 19%;
+    margin-top: 1%;
+}
+
+.componentHeading > a{
+    color:#070606;
+    font-size: 25px;
+}
+
+.componentSubHeading{
+    color:gray;
+    font-size: 15px;
+}
+
+/*footer CSS*/
+#footer{
+    height:120px;
+    width:100%;
+    margin-top: 5%;
+    background-color:#f7a0eb
+}
+
+#footText{
+    text-align: center;
+}
+
+.footDiv{
+    height:70px;
+    width:33%;
+    float: left;
+    border-right: 2px solid rgb(236, 12, 143);
+    text-align: center;
+}
+
+.noBorder{
+    border:none 
+}
+
+@media screen and (max-width:1600px){
+    body{
+        background-color:rgb(243, 184, 240)
+    }
+}
+
+
+@media screen and (max-width:1400px){
+    body{
+        background-color:rgb(244, 245, 184)
+    }
+}
+
+@media screen and (max-width:1200px){
+    body{
+        background-color:rgb(216, 248, 187)
+    }
+}
+
+@media screen and (max-width:1200px){
+    body{
+        background-color:rgb(240, 185, 228)
+    }
+
+}
+
+
+@media screen and (max-width:1000px){
+    body{
+        background-color:rgb(190, 238, 220)
+    }
+    .tileContainer {
+        width: 45%;
+    }
+
+}
+
+
+@media screen and (max-width:800px){
+    body{
+        background-color:rgb(236, 166, 166)
+    }
+
+    .tileContainer {
+        width: 100%;
+    }
+}
+
+
+@media screen and (max-width:500px){
+    body{
+        background-color:rgb(149, 184, 148)
+    }
+
+    .componentSubHeading{
+        color:white;
+    }
+}
