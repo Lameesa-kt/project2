@@ -3,6 +3,15 @@
     width:100%
 }
 
+#coupon{
+    height: 200px;
+    width: 400px;
+    background-color: gray;
+    z-index:100;
+    position: absolute;
+    display:none;
+    margin-left: 37%;
+}
 .slideImgContent{
     height:100% !important;
     width:100% !important
@@ -93,6 +102,15 @@
     
 }
 
+#icon{
+    width: 30px;
+    cursor:pointer;
+}
+
+nav ul{
+    flex: 1;
+    
+}
 .componentHeading > a{
     color:#070606;
     font-size: 25px;
@@ -108,7 +126,7 @@
     height:120px;
     width:100%;
     margin-top: 5%;
-    background-color:#dbd8db
+
 }
 
 #footText{

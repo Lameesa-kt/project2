@@ -5,6 +5,17 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
         <link href="first.css" rel="stylesheet" />
+        <script src="home.js"></script>
+        <style>
+            body{
+                background-color:white;
+                color:black;
+            }
+            .mydark{
+                background-color:black;
+                color:white;
+            }
+        </style>
     </head>
     <body>
         <nav class="navbar navbar-inverse">
@@ -25,6 +36,7 @@
                         <li><a href="">Dress</a></li>
                         <li><a href="">Beauty</a></li>
                     </ul>
+                    
                     <ul class="nav navbar-nav navbar-right">
                         <li><a href="">
                                 <span class="glyphicon glyphicon-user"> Register</span>
@@ -37,24 +49,35 @@
                           </a></li>
                         <li><a href="#">
                             <span class="glyphicon glyphicon-heart"></span>
-                          </a></li>    
+                          </a></li>   
                     </ul>
+
                     <form action="" method="POST">
                         <input type="text" name="ID" placeholder="Search for products" class="ii"/>
                         <input type="submit" name="search" value="SEARCH"/>
                     </form>
+                    
                 </div>
             </div>
         </nav>
-
+        <img src="images/moon.png" id="icon">
         <!---n-->
+        <div id="coupon">
+            <h2>sale is live!!</h2>
+            <button onClick="closeCoupon()"> &times; </button>
+        </div>
 
         <div id="eduSlider" class="carousel slide" data-ride="carousel">
+           
             <ol class="carousel-indicators">
                 <li data-target="#eduSlider" data-slide-to="0" class="active"></li>
                 <li data-target="#eduSlider" data-slide-to="1"></li>
                 <li data-target="#eduSlider" data-slide-to="2"></li>
             </ol>
+            <div id="coupon">
+                <h2>sale is live!!</h2>
+                <button onClick="closeCoupon()"> &times; </button>
+            </div>
             <div class="carousel-inner">
                 <div class="item slideImg active">
                     <img src="images/Screenshot (50).png" alt="imgslider" class="slideImgContent" />
@@ -76,6 +99,10 @@
         </div>
         <!--div    1-->
         <div id="quickSearch">
+            <div id="coupon">
+                <h2>sale is live!!</h2>
+                <button onClick="closeCoupon()"> &times; </button>
+            </div>
             <span id="quickHeading">   TOP PICKS</span>
             <div id="main">
                 <div class="tileContainer">
@@ -267,7 +294,12 @@
                 <p>Rate Us</p>
             </div>
         </div>
-    </body>
-</html>
+        <script>
+            var icon = document.getElementById("icon")
+            icon.onclick = function(){
+                document.body.classList.toggle("mydark");
+            window.onload = loadcoupon()
+            }
+           </script>
     </body>
 </html>
