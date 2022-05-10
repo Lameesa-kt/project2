@@ -1,10 +1,11 @@
+
 .slideImg{
-    height:600px;
+    height:300px;
     width:100%
 }
 
 #icon{
-    width: 30px;
+    width: 23px;
     cursor:pointer;
 }
 
@@ -12,14 +13,25 @@ nav ul{
     flex: 1;
     
 }
-
+#R{
+    color:rgb(51, 36, 31);
+    font-size: 30px;
+    font-family: "Times New Roman", Times, serif;
+    text-align: center;
+}
+#co{
+    height:60% !important;
+    width:98% !important;
+}
 #coupon{
-    height: 200px;
-    width: 400px;
-    background-color: gray;
+    height: 346px;
+    width: 410px;
+    border: 5px dotted #bbb; /* Dotted border */
+    border-radius: 15px; /* Rounded border */
+    background-color:rgb(235 224 233);
     z-index:100;
     position: absolute;
-    display:none;
+    display:block;
     margin-left: 37%;
 }
 .slideImgContent{
@@ -59,7 +71,6 @@ nav ul{
 
 #quickHeading{
      font-size:30px;
-     color:#0e0b0d;
      display:block;
      font-weight:bold;
      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -72,7 +83,6 @@ nav ul{
 
 #quickSubHeading{
     font-size:20px;
-    color:rgb(3, 3, 3);
     display:block;
     line-height: 3;
     margin-left: 2%;
@@ -112,12 +122,12 @@ nav ul{
     
 }
 .componentHeading > a{
-    color:#070606;
+
     font-size: 25px;
 }
 
 .componentSubHeading{
-    color:gray;
+ 
     font-size: 15px;
 }
 

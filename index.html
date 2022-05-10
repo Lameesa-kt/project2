@@ -30,6 +30,7 @@
                         Myntra
                     </a>
                 </div>
+               
                 <div class="navbar-collapse collapse" id="edunav">
                     <ul class="nav navbar-nav">
                         <li><a href="">Home/Living</a></li>
@@ -50,6 +51,50 @@
                         <li><a href="#">
                             <span class="glyphicon glyphicon-heart"></span>
                           </a></li>   
+                        
+                          <li>
+                            <p id="out"></p>
+                            <div id="icon">
+                                <img src="images/moon.png" id="icon">
+                              
+                            </div>
+                            
+                            <script>
+                                let x = document.getElementById('out');
+                                function geolocation(){
+                                    if(navigator.geolocation){
+                                        navigator.geolocation.getCurrentPosition(showPosition)
+                                    }else{
+                                        x="Geo Not Supported"
+                                    }
+                                }
+                    
+                                function showPosition(data){
+                                    console.log(data)
+                                    // x.innerText=`Latitude is ${data.coords.latitude} & Longitude is ${data.coords.longitude}`
+                                    let latitude = data.coords.latitude;
+                                    let longitude = data.coords.longitude
+                                    const url = `https://api.openweathermap.org/data/2.5/forecast/daily?lat=${latitude}&lon=${longitude}&mode=json&units=metric&cnt=1&appid=fbf712a5a83d7305c3cda4ca8fe7ef29`;
+                    
+                                    /// api Calling 
+                                    fetch(url,{method:'GET'})
+                                    // return promise
+                                    .then((res) => res.json())
+                                    // return data
+                                    .then((data) => {
+                                        let cityName = data.city.name
+                                        let weather = data.list[0].temp.day
+                                        x=`Weather of ${cityName} is ${weather} °C`
+                                        // document.getElementById('icon').appendChild(
+                                        //      <img src='https://openweathermap.org/img/w/'+data.list[0].weather.icon+'.png'/>
+                                        // )
+                                    })
+                                }
+                            </script>
+                            <script>    
+                                window.onload = geolocation()
+                            </script>
+                        </li>
                     </ul>
 
                     <form action="" method="POST">
@@ -60,11 +105,12 @@
                 </div>
             </div>
         </nav>
-        <img src="images/moon.png" id="icon">
+      
         <!---n-->
         <div id="coupon">
-            <h2>sale is live!!</h2>
             <button onClick="closeCoupon()"> &times; </button>
+            <h2 ID="R" ><b>GRAB YOUR COUPEN!!</b></h2>
+            <img src='images/Screenshot (60).png' alt="Avatar" id="co"/>
         </div>
 
         <div id="eduSlider" class="carousel slide" data-ride="carousel">
@@ -74,10 +120,6 @@
                 <li data-target="#eduSlider" data-slide-to="1"></li>
                 <li data-target="#eduSlider" data-slide-to="2"></li>
             </ol>
-            <div id="coupon">
-                <h2>sale is live!!</h2>
-                <button onClick="closeCoupon()"> &times; </button>
-            </div>
             <div class="carousel-inner">
                 <div class="item slideImg active">
                     <img src="images/Screenshot (50).png" alt="imgslider" class="slideImgContent" />
@@ -99,10 +141,6 @@
         </div>
         <!--div    1-->
         <div id="quickSearch">
-            <div id="coupon">
-                <h2>sale is live!!</h2>
-                <button onClick="closeCoupon()"> &times; </button>
-            </div>
             <span id="quickHeading">   TOP PICKS</span>
             <div id="main">
                 <div class="tileContainer">
@@ -295,8 +333,11 @@
             </div>
         </div>
         <script>
+                  
+           
             var icon = document.getElementById("icon")
-            icon.onclick = function(){
+            icon.onclick = function()
+            {
                 document.body.classList.toggle("mydark");
             window.onload = loadcoupon()
             }
